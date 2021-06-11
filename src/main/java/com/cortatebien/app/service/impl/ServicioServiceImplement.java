@@ -40,7 +40,6 @@ public class ServicioServiceImplement implements ServicioService{
 		servicio.setNombre(dto.getNombre());
 		servicio.setDescripcion(dto.getDescripcion());
 		servicio.setPrecio(dto.getPrecio());
-		servicio.setTiempo_estimado(dto.getTiempo_estimado());
 		Optional<Categoria> categoria = icategoriaRepository.findById(dto.getId_categoria());
 		if(categoria.isPresent()) {
 			servicio.setCategoria(categoria.get());

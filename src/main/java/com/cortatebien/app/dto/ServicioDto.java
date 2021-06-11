@@ -1,6 +1,5 @@
 package com.cortatebien.app.dto;
 
-import java.util.Date;
 
 
 public class ServicioDto {
@@ -8,7 +7,6 @@ public class ServicioDto {
 	private String nombre;  
 	private String descripcion; 
 	private Double precio; 
-	private Date tiempo_estimado;
 	private Integer id_sucursal; 
 	private Integer id_categoria;
 	
@@ -30,12 +28,6 @@ public class ServicioDto {
 	}
 	public void setPrecio(Double precio) {
 		this.precio = precio;
-	}
-	public Date getTiempo_estimado() {
-		return tiempo_estimado;
-	}
-	public void setTiempo_estimado(Date tiempo_estimado) {
-		this.tiempo_estimado = tiempo_estimado;
 	}
 	public Integer getId_sucursal() {
 		return id_sucursal;

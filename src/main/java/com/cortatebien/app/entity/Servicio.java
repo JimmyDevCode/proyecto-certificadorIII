@@ -1,7 +1,6 @@
 package com.cortatebien.app.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -11,8 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table (name = "Servicio")
@@ -30,8 +27,6 @@ public class Servicio implements Serializable{
 	private String nombre; 
 	private String descripcion; 
 	private Double precio; 
-	@Temporal(TemporalType.TIME)
-	private Date tiempo_estimado;
 	
 	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "id_categoria")
@@ -64,12 +59,6 @@ public class Servicio implements Serializable{
 	}
 	public void setPrecio(Double precio) {
 		this.precio = precio;
-	}
-	public Date getTiempo_estimado() {
-		return tiempo_estimado;
-	}
-	public void setTiempo_estimado(Date tiempo_estimado) {
-		this.tiempo_estimado = tiempo_estimado;
 	}
 	public Categoria getCategoria() {
 		return categoria;
